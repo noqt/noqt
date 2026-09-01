@@ -2,10 +2,16 @@
 
 NOQT builds open-source software for security and risk.
 
-## Try the hosted containment proof without installing anything
+## Try Lumi Eggcracker without installing anything
 
-Fork the repository, enable GitHub Actions, and run the hosted containment probe on a disposable GitHub runner. It tests the bounded kill mechanism; it does not install the product, recognise an AI workload, or prove the whole product.
+If you use the authenticated GitHub CLI, the helper creates or reuses your exact
+fork, checks that its workflow matches NOQT's reviewed version, dispatches it on a
+disposable GitHub runner and, when it can identify the exact run, prints commands
+to watch it and read the result.
 
-[Run the three-step hosted proof](https://github.com/noqt/Lumi-Eggcracker/blob/main/TRY_IT.md)
+[Start the hosted proof from your terminal](https://github.com/noqt/Lumi-Eggcracker/blob/main/TRY_IT.md)
 
-If it passes, refuses safely, or feels confusing, [send the public workflow URL through the redacted result form](https://github.com/noqt/Lumi-Eggcracker/issues/new?template=hosted_probe_result.yml).
+The proof tests the bounded kill mechanism. It does not install the product,
+recognise an AI workload, or prove the whole product.
+
+If it passes, returns a redacted failure, or feels confusing, [share the public run through the current-use result form](https://github.com/noqt/Lumi-Eggcracker/issues/new?template=hosted_probe_result.yml).
