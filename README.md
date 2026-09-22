@@ -1,11 +1,11 @@
-# NOQT
+# noqt
 
-NOQT builds open-source software for security and risk.
+noqt builds open-source software for security and risk. Explore our work at [noqt](https://noqt.no-qt.chatgpt.site).
 
 ## Try Lumi Eggcracker without installing anything
 
 If you use the authenticated GitHub CLI, the helper creates or reuses your exact
-fork, checks that its workflow matches NOQT's reviewed version, dispatches it on a
+fork, checks that its workflow matches noqt's reviewed version, dispatches it on a
 disposable GitHub runner and, when it can identify the exact run, prints commands
 to watch it and read the result.
 
