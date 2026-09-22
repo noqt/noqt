@@ -2,6 +2,16 @@
 
 noqt builds open-source software for security and risk. Explore our work at [noqt](https://noqt.no-qt.chatgpt.site).
 
+## Zumi kept receipts
+
+| First synthetic frame | Second synthetic frame |
+|:--:|:--:|
+| [![First retained synthetic Zumi frame](https://noqt.no-qt.chatgpt.site/zumi-session-capsule/v1/frame-01.webp)](https://noqt.no-qt.chatgpt.site/research/zumi-one-session-two-frames-one-observation) | [![Second retained synthetic Zumi frame](https://noqt.no-qt.chatgpt.site/zumi-session-capsule/v1/frame-02.webp)](https://noqt.no-qt.chatgpt.site/research/zumi-one-session-two-frames-one-observation) |
+
+Two simulated phone-style frames. One stored technical observation. The same persisted session, checked after restart.
+
+[Inspect the static replay and exact hashes](https://noqt.no-qt.chatgpt.site/research/zumi-one-session-two-frames-one-observation). It isn't a downloadable product or a real-camera demo, and the public page doesn't rerun the private app or model.
+
 ## Try Lumi Eggcracker without installing anything
 
 If you use the authenticated GitHub CLI, the helper creates or reuses your exact
