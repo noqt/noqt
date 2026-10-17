@@ -1,0 +1,52 @@
+{
+  "name": "yumi-continuity-threadmark",
+  "version": "1.1.0",
+  "schema": "yumi.continuity.threadmark.v1.1",
+  "entrypoint": "yumi_continuity.py",
+  "commands": [
+    ["resolve", "--input", "PATH_OR_DASH"],
+    ["threadmark", "--input", "PATH_OR_DASH"]
+  ],
+  "license": "MIT",
+  "runtime": "python3.11+-standard-library-only",
+  "files": [
+    "yumi_continuity.py",
+    "schema.json",
+    "README.md",
+    "LICENSE",
+    "manifest.json",
+    "tests/test_yumi_continuity.py",
+    "examples/scenarios.json"
+  ],
+  "threadmark_limits": {
+    "max_input_bytes": 65536,
+    "max_output_bytes": 16384,
+    "max_required_keys": 8,
+    "max_heads": 16,
+    "max_revisions": 128,
+    "scope_count": 1
+  },
+  "statuses": [
+    "READY",
+    "REVIEW",
+    "INVALID",
+    "DETAIL_REQUIRED"
+  ],
+  "side_effects": {
+    "network": false,
+    "telemetry": false,
+    "writes_ledger": false,
+    "output_file_mode": false,
+    "private_yumi_source_or_data": false,
+    "executes_ledger_values": false,
+    "source_ref_dereference": false
+  },
+  "provenance": {
+    "source_labels": "unverified",
+    "source_ids": "opaque_data_only",
+    "capability_capsule": "inert_metadata"
+  },
+  "claim_boundary": "READY means only required-key consistency in the supplied ledger; it does not establish truth, source authentication, completeness outside input, permission, safety, adoption, or context savings.",
+  "stage": "public_source_capability",
+  "publication_status": "candidate_pending_owner_acceptance_and_authorized_public_transport"
+}
