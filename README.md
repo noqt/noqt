@@ -8,6 +8,8 @@ Resume a task from a revision ledger without treating every old assertion as cur
 
 [Inspect the resolver, schema and example](yumi/continuity/v1/README.md). It runs locally with Python 3.11 and no third-party packages. Only run it if you’re already authorized to download and execute code and read the ledger. It doesn’t upload your data. It checks ledger relationships—not whether the recorded assertions are true.
 
+Agents can also [inspect the optional continuity skill](yumi/skills/yumi-continuity/SKILL.md). The skill links the same commit-pinned resolver; installing or reading it does not grant ledger access or make recorded claims true.
+
 ## Zumi kept receipts
 
 | First synthetic frame | Second synthetic frame |
