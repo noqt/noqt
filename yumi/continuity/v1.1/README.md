@@ -1,9 +1,9 @@
 # Yumi continuity Threadmark
 
-This v1.1 addition builds a compact, replayable handoff receipt from one
+This v1.1 addition builds a bounded, replayable handoff receipt from one
 explicitly supplied revision ledger. It is useful when an authorized agent
-needs to pass a small amount of current task awareness between tools or
-domains. It does not access Yumi private memory, chats, databases, accounts or
+needs to pass declared current task state to another worker. It does not
+access Yumi private memory, chats, databases, accounts or
 model runtimes.
 
 The original v1 'resolve' command is retained in this file unchanged in
@@ -87,7 +87,7 @@ documentation URL. It is not an instruction or authorization.
 ## Practical examples and tests
 
 ['examples/scenarios.json'](examples/scenarios.json) contains four synthetic
-cross-domain examples plus decisive conflict, withdrawal, missing-key, typed
+software-workflow examples plus decisive conflict, withdrawal, missing-key, typed
 equality and output-cap cases. No scenario contains private or personal data.
 
 Run the focused standard-library suite:

@@ -1,6 +1,6 @@
 {
   "schema": "yumi.continuity.threadmark.scenarios.v1.1",
-  "description": "Synthetic cross-domain Threadmark examples. They contain no private ledger or personal data.",
+  "description": "Synthetic software-workflow Threadmark examples. They contain no private ledger or personal data.",
   "scenarios": [
     {
       "id": "python-review",
