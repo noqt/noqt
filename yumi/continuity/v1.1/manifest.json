@@ -5,7 +5,8 @@
   "entrypoint": "yumi_continuity.py",
   "commands": [
     ["resolve", "--input", "PATH_OR_DASH"],
-    ["threadmark", "--input", "PATH_OR_DASH"]
+    ["threadmark", "--input", "PATH_OR_DASH"],
+    ["handoff", "--input", "PATH_OR_DASH"]
   ],
   "license": "MIT",
   "runtime": "python3.11+-standard-library-only",
@@ -16,7 +17,9 @@
     "LICENSE",
     "manifest.json",
     "tests/test_yumi_continuity.py",
-    "examples/scenarios.json"
+    "examples/scenarios.json",
+    "threadmark_handoff.py",
+    "tests/test_threadmark_handoff.py"
   ],
   "threadmark_limits": {
     "max_input_bytes": 65536,
@@ -25,6 +28,11 @@
     "max_heads": 16,
     "max_revisions": 128,
     "scope_count": 1
+  },
+  "handoff_limits": {
+    "max_input_bytes": 65536,
+    "max_output_bytes": 4096,
+    "required_key_states": "all_or_detail_required"
   },
   "statuses": [
     "READY",

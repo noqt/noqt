@@ -103,3 +103,19 @@ explicit detail-required failure. These synthetic checks are not evidence of
 universal savings, intelligence, production reliability, independent
 discovery or adoption.
 
+## Carry a handoff card
+
+When an authorized caller already has a Threadmark JSON receipt, the standalone
+exporter retains required-key states, typed values, source and assertion
+references, exact receipt and input digests, and the inert capability capsule:
+
+~~~text
+python3 -I -B -S threadmark_handoff.py export --input threadmark.json
+cat threadmark.json | python3 -I -B -S threadmark_handoff.py export --input -
+~~~
+
+The output is deterministic canonical JSON up to 4 KiB. If complete required
+detail cannot fit, the result is `DETAIL_REQUIRED` and does not emit a
+truncated success card. The exporter summarizes the supplied receipt; it does
+not resolve a ledger or dereference sources.
+
