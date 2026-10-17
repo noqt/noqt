@@ -1,0 +1,63 @@
+{
+  "schema": "yumi.continuity.ledger.v1",
+  "scope": "synthetic-multi-session-task",
+  "prior_heads": ["r2"],
+  "revisions": [
+    {
+      "id": "r1",
+      "parent": null,
+      "sequence": 1,
+      "assertions": [
+        {
+          "id": "a1",
+          "key": "task.status",
+          "value": "started",
+          "source_label": "session-1-note",
+          "source_ref": "opaque://synthetic/session-1"
+        },
+        {
+          "id": "a2",
+          "key": "task.owner_decision",
+          "value": "continue-after-review",
+          "source_label": "session-1-note",
+          "source_ref": "opaque://synthetic/session-1"
+        }
+      ]
+    },
+    {
+      "id": "r2",
+      "parent": "r1",
+      "sequence": 2,
+      "assertions": [
+        {
+          "id": "a3",
+          "key": "task.status",
+          "value": "paused-for-handoff",
+          "source_label": "session-2-note",
+          "source_ref": "opaque://synthetic/session-2"
+        }
+      ]
+    },
+    {
+      "id": "r3",
+      "parent": "r2",
+      "sequence": 3,
+      "assertions": [
+        {
+          "key": "task.status",
+          "value": "resumed",
+          "source_label": "session-3-note",
+          "source_ref": "opaque://synthetic/session-3"
+        },
+        {
+          "key": "task.owner_decision",
+          "state": "retracted",
+          "target": "a2",
+          "reason": "The old handoff decision was withdrawn before resumption.",
+          "source_label": "session-3-note",
+          "source_ref": "opaque://synthetic/session-3"
+        }
+      ]
+    }
+  ]
+}

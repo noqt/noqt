@@ -1,0 +1,37 @@
+{
+  "name": "yumi-continuity-resolver",
+  "version": "1.0.0",
+  "schema": "yumi.continuity.ledger.v1",
+  "entrypoint": "yumi_continuity.py",
+  "command": ["resolve", "--input", "PATH_OR_DASH"],
+  "license": "MIT",
+  "runtime": "python3-standard-library-only",
+  "files": [
+    "yumi_continuity.py",
+    "schema.json",
+    "README.md",
+    "LICENSE",
+    "manifest.json",
+    "tests/test_yumi_continuity.py",
+    "examples/ledger.json"
+  ],
+  "limits": {
+    "max_input_bytes": 65536,
+    "max_revisions": 128,
+    "scope_count": 1
+  },
+  "side_effects": {
+    "network": false,
+    "telemetry": false,
+    "writes_ledger": false,
+    "output_file_mode": false,
+    "private_yumi_source_or_data": false,
+    "executes_ledger_values": false
+  },
+  "provenance": {
+    "source_labels": "unverified",
+    "source_refs": "opaque_only"
+  },
+  "stage": "public_source_capability",
+  "publication_status": "candidate_pending_owner_acceptance_and_authorized_public_transport"
+}

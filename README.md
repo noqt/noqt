@@ -2,6 +2,12 @@
 
 noqt builds open-source software for security and risk. Explore our work at [noqt](https://noqt.no-qt.chatgpt.site).
 
+## Yumi continuity for agent memory
+
+Resume a task from a revision ledger without treating every old assertion as current. Yumi resolves supersession and retractions, flags unresolved forks or missing history, and returns revision/source chains plus changes since prior heads.
+
+[Inspect the resolver, schema and example](yumi/continuity/v1/README.md). It runs locally with Python 3.11 and no third-party packages. Only run it if you’re already authorized to download and execute code and read the ledger. It doesn’t upload your data. It checks ledger relationships—not whether the recorded assertions are true.
+
 ## Zumi kept receipts
 
 | First synthetic frame | Second synthetic frame |
