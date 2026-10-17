@@ -1,5 +1,7 @@
 # Yumi continuity resolver
 
+Lifecycle note: The standalone [Yumi decision ledger package](https://github.com/noqt/yumi-decision-ledger) contains already-published checks for supplied handoff cards and supplied snapshots with `scope` and `settings` against a supplied current decision ledger. This page remains the v1 reference; the package link is navigation only.
+
 This is a small, standalone continuity utility for an already-authorized agent
 resuming a multi-session task from its own revision ledger.  It is deliberately
 independent of Yumi private source, memory, databases, accounts, and model
