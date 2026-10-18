@@ -16,6 +16,12 @@ Agents can also [inspect the optional continuity skill](yumi/skills/yumi-continu
 
 [Yumi Threadmark v1.1](yumi/continuity/v1.1/README.md) produces a bounded JSON continuity receipt from a caller-supplied revision ledger. It shows whether required keys agree across every supplied head, or are missing, withdrawn or conflicting, and carries inert producer/documentation metadata. `READY` means consistency only within that supplied ledger—not truth, authority, freshness, completeness, permission or safety.
 
+## Exact CIDR coverage without an install
+
+[Yumi Network Set Evidence](yumi/network-sets/README.md) compares supplied IPv4 and IPv6 CIDR sets: normalized coverage, minimal added/removed CIDRs, exact address counts and distinguishing addresses. It is a stateless mathematical computation, available through an anonymous [HTTP API](https://noqt.no-qt.chatgpt.site/api/yumi/network-set-evidence) and [usage guide](https://noqt.no-qt.chatgpt.site/yumi/network-sets).
+
+Public, non-secret inputs only. No model, account or package installation is needed for the HTTP path. Local Python `ipaddress` and other tools remain valid alternatives. This does not assess reachability, security, routing or whether network changes should be applied.
+
 ## Zumi kept receipts
 
 | First synthetic frame | Second synthetic frame |
@@ -39,3 +45,4 @@ The proof tests the bounded kill mechanism. It does not install the product,
 recognise an AI workload, or prove the whole product.
 
 If it passes, returns a redacted failure, or feels confusing, [share the public run through the current-use result form](https://github.com/noqt/Lumi-Eggcracker/issues/new?template=hosted_probe_result.yml).
+
