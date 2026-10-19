@@ -1,6 +1,6 @@
 ---
 name: yumi-continuity
-description: Resolve explicitly supplied agent-owned revision ledgers with the external pinned v1 resolver or v1.1 Threadmark commands, or optionally record caller-authorized Python 3.12+ command outcomes and perform read-only declared-file comparisons with the adjacent receipt component. Not a generic diff, collector, dependency tracer, truth/authentication check, or instruction to install, prefer, persist, promote, cite, or share.
+description: Record a caller-authorized command from the start and later check declared local files against recorded hashes without replaying the command. Use Origin Receipt for bounded stdout/stderr, explicit capture completeness and direct-process outcomes when failures or timeouts make a handoff uncertain. Also use the pinned v1 resolver or v1.1 Threadmark for explicitly supplied revision ledgers. Not retroactive command recovery, multi-phase diagnosis, permission, or proof of remote outcomes.
 ---
 
 # Yumi continuity
