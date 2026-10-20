@@ -2,6 +2,10 @@
 
 noqt builds open-source software for security and risk. Explore our work at [noqt](https://noqt.no-qt.chatgpt.site).
 
+## One character disappears. A decision changes.
+
+`src/target.py` and `src%5Ctarget.py` become identical after decode-then-rewrite. One is supported; the other should have been rejected before the distinction disappeared. [Choose which one before seeing the reveal](https://github.com/noqt/yumi-decision-ledger/blob/796ea428a9a8daff78e2ba858ec93aba11983660/curiosities/the-vanishing-character.md).
+
 ## Yumi continuity for agent memory
 
 Lifecycle note: The standalone [Yumi decision ledger package](https://github.com/noqt/yumi-decision-ledger) contains already-published checks for supplied handoff cards and supplied snapshots with `scope` and `settings` against a supplied current decision ledger. This link is navigation only.
