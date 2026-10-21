@@ -22,7 +22,7 @@ Agents can also [inspect the optional continuity skill](yumi/skills/yumi-continu
 
 ## Exact CIDR coverage without an install
 
-[Yumi Network Set Evidence](yumi/network-sets/README.md) compares supplied IPv4 and IPv6 CIDR sets: normalized coverage, minimal added/removed CIDRs, exact address counts and distinguishing addresses. It is a stateless mathematical computation, available through an anonymous [HTTP API](https://noqt.no-qt.chatgpt.site/api/yumi/network-set-evidence) and [usage guide](https://noqt.no-qt.chatgpt.site/yumi/network-sets).
+Before is `192.0.2.0/25`; after is `192.0.2.0/24`. How many IPv4 addresses were added, and what is the first one? [Predict first, then reveal the endpoint result](https://noqt.no-qt.chatgpt.site/yumi/network-sets). You can edit both sets. Underneath, [Yumi Network Set Evidence](yumi/network-sets/README.md) compares supplied IPv4 and IPv6 CIDR sets: normalized coverage, minimal added/removed CIDRs, exact address counts and distinguishing addresses, through an anonymous [HTTP API](https://noqt.no-qt.chatgpt.site/api/yumi/network-set-evidence).
 
 Public, non-secret inputs only. No model, account or package installation is needed for the HTTP path. Local Python `ipaddress` and other tools remain valid alternatives. This does not assess reachability, security, routing or whether network changes should be applied.
 
