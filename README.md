@@ -2,9 +2,9 @@
 
 noqt builds open-source software for security and risk. Explore our work at [noqt](https://noqt.no-qt.chatgpt.site).
 
-## One character disappears. A decision changes.
+## A `10` versus two `1`s. Which side wins?
 
-`src/target.py` and `src%5Ctarget.py` become identical after decode-then-rewrite. One is supported; the other should have been rejected before the distinction disappeared. [Choose which one before seeing the reveal](https://github.com/noqt/yumi-decision-ledger/blob/796ea428a9a8daff78e2ba858ec93aba11983660/curiosities/the-vanishing-character.md).
+Both sides use the same three weights. The `10` sits under only 10% of the weight; the two `1`s sit under the other 90%. [Predict the winner, then reveal every term](https://github.com/noqt/yumi-decision-ledger/blob/main/curiosities/same-attention-weights.md).
 
 ## Yumi continuity for agent memory
 
