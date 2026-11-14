@@ -16,6 +16,17 @@ Verify the downloaded file before use:
 python -c "import hashlib,pathlib; p=pathlib.Path('python-import-layout-evidence.py'); print(hashlib.sha256(p.read_bytes()).hexdigest())"
 ```
 
+## Hosted option (no local download)
+
+The CLI above remains local and has no network or subprocess path. A separate anonymous hosted service performs bounded static comparison of exact public PyPI and GitHub inputs without installing or executing subject code:
+
+- REST: `POST https://noqt.no-qt.chatgpt.site/api/yumi/python-import-layout`
+- MCP: `https://noqt.no-qt.chatgpt.site/api/yumi/mcp`, tool `python_import_layout_evidence`
+- Registry: [`io.github.noqt/yumi-python-import-layout` 1.0.0](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.noqt%2Fyumi-python-import-layout/versions/1.0.0)
+- [Worked request shape and complete hosted limits](https://noqt.no-qt.chatgpt.site/yumi/python-import-layout#hosted-mode)
+
+Use only public, non-secret inputs. Application code does not persist request data, although the host may process network metadata. Hosted processing is bounded to a 64 KiB request, one 20 MiB/4,096-member archive, eight consumers, a 30-second budget, and a 256 KiB response. Results are static evidence—not resolver, runtime, installability, security, authenticity, or historical-use conclusions. Use the local CLI when files must not cross the network.
+
 ## Use
 
 Name the archive, source snapshot, each consumer file, and each dotted import target explicitly:
