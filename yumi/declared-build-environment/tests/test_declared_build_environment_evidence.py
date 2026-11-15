@@ -167,6 +167,27 @@ class EvidenceTests(unittest.TestCase):
         whole_file = evidence.analyze(root, manifest)
         self.assertEqual(whole_file["routes"][0]["status"], evidence.STATUS_UNKNOWN)
 
+    def test_mixed_markdown_install_is_opaque_not_a_declaration_gap(self) -> None:
+        root, manifest = self.fixture(
+            pyproject=(
+                '[build-system]\nrequires = ["wheel"]\n'
+                'build-backend = "setuptools.build_meta"\n'
+            ),
+            declaration=(
+                "```bash\n"
+                "python -m pip install --no-build-isolation wheel -e .\n"
+                "```\n"
+            ),
+            declaration_path="BUILDING.md",
+            entrypoint="python -m pip install --no-build-isolation .\n",
+        )
+        result = evidence.analyze(root, manifest)
+        route = result["routes"][0]
+        wheel = route["requirements"][0]
+        self.assertEqual(route["status"], evidence.STATUS_UNKNOWN)
+        self.assertEqual(wheel["requirement"], "wheel")
+        self.assertEqual(wheel["status"], evidence.STATUS_UNKNOWN)
+
     def test_path_traversal_is_rejected(self) -> None:
         root, manifest = self.fixture()
         data = json.loads(manifest.read_text(encoding="utf-8"))

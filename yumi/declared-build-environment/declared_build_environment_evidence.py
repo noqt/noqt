@@ -414,19 +414,25 @@ def parse_markdown_commands(data: bytes, label: str, line_offset: int = 0) -> Fa
             continue
         start, _ = located
         args = tokens[start:]
-        if any(token in ("-e", "--editable") for token in args) or any(
-            token in (".", "./", "-.") for token in args
-        ):
-            # Installing the project itself is a build invocation, not a
-            # declaration of its build requirements.
-            continue
         options_without_value = {"--no-build-isolation", "--no-deps", "--upgrade", "--user", "-U"}
         options_with_value = {"--config-settings", "--index-url", "--extra-index-url", "--constraint", "-c"}
         packages: list[str] = []
         index = 0
         unsupported = False
+        project_install = False
         while index < len(args):
             token = args[index]
+            if token in ("-e", "--editable"):
+                project_install = True
+                if index + 1 >= len(args):
+                    unsupported = True
+                    break
+                index += 2
+                continue
+            if token in (".", "./", "-."):
+                project_install = True
+                index += 1
+                continue
             if token in options_without_value:
                 index += 1
                 continue
@@ -446,6 +452,12 @@ def parse_markdown_commands(data: bytes, label: str, line_offset: int = 0) -> Fa
             index += 1
         if unsupported:
             facts.issue(f"{label}:{number}: pip command contains unsupported options or dynamic values", opaque=True)
+            continue
+        if project_install:
+            if packages:
+                facts.issue(f"{label}:{number}: pip command mixes a project and package installation", opaque=True)
+            # Installing the project itself is a build invocation, not a
+            # declaration of its build requirements.
             continue
         for package in packages:
             name, state = _parse_requirement(package)
